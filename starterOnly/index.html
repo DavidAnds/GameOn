@@ -71,6 +71,7 @@
                   name="first"
                   minlength="2"
                 /><br>
+                <p class="error-msg">Veuillez entrer 2 caractères ou plus pour le champ du prénom.</p>
               </div>
               <div
                 class="formData">
@@ -81,6 +82,7 @@
                   id="last"
                   name="last"
                 /><br>
+                <p class="error-msg">Veuillez entrer 2 caractères ou plus pour le champ du nom.</p>
               </div>
               <div
                 class="formData">
@@ -91,6 +93,7 @@
                   id="email"
                   name="email"
                 /><br>
+                <p class="error-msg">Veuillez entrer un email valide.</p>
               </div>
               <div
                 class="formData">
@@ -101,11 +104,13 @@
                   id="birthdate"
                   name="birthdate"
                 /><br>
+                <p class="error-msg">Vous devez entrer votre date de naissance.</p>
               </div>
               <div
                 class="formData">
                 <label for="quantity">À combien de tournois GameOn avez-vous déjà participé ?</label><br>
                 <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
+                <p class="error-msg">Vous devez renseigner le nombre de vos tournois avec une valeur numérique.</p>
               </div>
               <p class="text-label">A quel tournoi souhaitez-vous participer cette année ?</p>
               <div
@@ -176,6 +181,7 @@
                   <span class="checkbox-icon"></span>
                   Portland</label
                 >
+                <p class="error-msg">Vous devez choisir une option.</p>
               </div>
 
               <div
@@ -196,6 +202,7 @@
                   Je Je souhaite être prévenu des prochains évènements.
                 </label>
                 <br>
+                <p class="error-msg">Vous devez vérifier que vous acceptez les termes et conditions.</p>
               </div>
               <input
                 class="btn-submit"

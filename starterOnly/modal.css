@@ -527,3 +527,13 @@ footer {
   }
 }
 
+.error-msg {
+  color: rgba(255, 78, 96, 1);
+  font-size: 0.625rem;
+  margin-top: 0px;
+  display: none;
+}
+
+.error-input {
+  border: 2px solid rgba(255, 78, 96, 1);
+}
