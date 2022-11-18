@@ -148,6 +148,7 @@ function quantityValidation() {
 locationInputs.forEach((input) => {
     input.addEventListener('input', () => {
         inputsValidity.location = true;
+        showError(5, true);
     });
 });
 
