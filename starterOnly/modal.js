@@ -12,12 +12,14 @@ const modalbg = document.querySelector('.bground');
 const modalBtn = document.querySelectorAll('.modal-btn');
 const formData = document.querySelectorAll('.formData');
 const closeBtn = document.querySelector('.close');
+const confirmationCloseBtn = document.querySelector('.confirmation-close');
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener('click', launchModal));
 
 // close modal event when you click on the button (x)
 closeBtn.addEventListener('click', closeModal)
+confirmationCloseBtn.addEventListener('click', closeModal)
 
 // launch modal form
 function launchModal() {

@@ -12,6 +12,7 @@ const inputsValidity = {
 };
 // On recupere notre form sur le dom
 const form = document.querySelector('form');
+const confirmationContainer = document.querySelector('.confirmation-container')
 
 // On envoie la fonction validate quand on submit le formulaire
 form.addEventListener('submit', validate);
@@ -32,7 +33,8 @@ function validate(e) {
             showError(index, false);
         });
     } else {
-        alert('top');
+        form.style.display = "none"
+        confirmationContainer.style.display = "flex"
     }
 }
 
