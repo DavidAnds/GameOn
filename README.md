@@ -22,3 +22,6 @@ Vous rendre sur ce dossier et basculer dans la branche solution
 git branch solution
 ```
 Vous pouvez alors ouvrir le fichier index.htlm et tester les fonctionnalités du site.
+
+## Lien repo original
+https://github.com/OpenClassrooms-Student-Center/GameOn-website-FR/
