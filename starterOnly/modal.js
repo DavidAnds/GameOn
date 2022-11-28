@@ -29,4 +29,6 @@ function launchModal() {
 // Close modal form
 function closeModal () {
     modalbg.style.display = 'none';
+    confirmationContainer.style.display = "none"
+    form.style.display = "block"
 };

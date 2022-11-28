@@ -12,7 +12,7 @@ const inputsValidity = {
 };
 // On recupere notre form sur le dom
 const form = document.querySelector('form');
-const confirmationContainer = document.querySelector('.confirmation-container')
+const confirmationContainer = document.querySelector('.confirmation-container');
 
 // On envoie la fonction validate quand on submit le formulaire
 form.addEventListener('submit', validate);
@@ -33,8 +33,9 @@ function validate(e) {
             showError(index, false);
         });
     } else {
-        form.style.display = "none"
-        confirmationContainer.style.display = "flex"
+        form.style.display = 'none';
+        confirmationContainer.style.display = 'flex';
+        form.reset()
     }
 }
 
@@ -43,12 +44,12 @@ const errorMsg = document.querySelectorAll('.error-msg');
 // On récupere tous les inputs de type text
 const textControl = document.querySelectorAll('.text-control');
 
-
 // Fonctions qui permet d'afficher les erreurs en fonctionde l'index de l'input choisi. Quand l'input est valide(true), on envoie pas d'erreur sinon on montre l'erreur
 function showError(index, validation) {
     if (validation) {
         errorMsg[index].style.display = 'none';
-        if (textControl[index]) textControl[index].classList.remove('error-input');
+        if (textControl[index])
+            textControl[index].classList.remove('error-input');
     } else {
         errorMsg[index].style.display = 'block';
         if (textControl[index]) textControl[index].classList.add('error-input');
@@ -71,8 +72,14 @@ firstInput.addEventListener('blur', firstValidation);
 firstInput.addEventListener('input', firstValidation);
 
 // Fonction qui permet de valider ou le nom le premier input et affiche une erreur quand l'input n'est pas valide
+const regexText = /^[a-zA-Z]+$/;
 function firstValidation() {
-    if (firstInput.value.length >= 2) {
+    console.log(firstInput.value.match(regexText));
+    if (
+        firstInput.value.length >= 2 &&
+        firstInput.value.trim() != '' &&
+        firstInput.value.trim().match(regexText)
+    ) {
         inputsValidity.first = true;
         showError(0, true);
     } else {
@@ -87,7 +94,11 @@ lastInput.addEventListener('input', lastValidation);
 
 // Fonction qui permet de valider ou le nom le premier input
 function lastValidation() {
-    if (lastInput.value.length >= 2) {
+    if (
+        lastInput.value.length >= 2 &&
+        lastInput.value.trim() != '' &&
+        lastInput.value.trim().match(regexText)
+    ) {
         inputsValidity.last = true;
         showError(1, true);
     } else {
